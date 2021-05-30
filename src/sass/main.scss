@@ -1,6 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
 
+// import Slick css
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import "fonts";
 @import "variables";
 @import "components";
 @import "reset";
+
+
+//TODO
+.slick-prev {
+    position: absolute;
+    z-index: 999999;
+    bottom: 120px;
+    left: 0;
+}
+
+.slick-next {
+    position: absolute;
+    z-index: 999999;
+    bottom: 120px;
+    right: 0;
+}
