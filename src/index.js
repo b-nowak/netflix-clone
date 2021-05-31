@@ -18,6 +18,8 @@ $(document).ready(() => {
         dots: false,
         arrows: true,
         centerMode: true,
+        infinite: true,
+        variableWidth: true,
         //centerPadding: '30px',
         focusOnSelect: true,
         //prevArrow: '<a class="slick-prev" href="#"><i data-icon="ei-arrow-left" data-size="m"></i></a>',

@@ -1,0 +1,11 @@
+.navbar-wrap {
+    position: absolute;
+    z-index: 1;
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                color: $white;
+            }
+        }
+    }
+}
