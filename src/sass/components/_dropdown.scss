@@ -1,6 +1,16 @@
-.dropdown-toggle {
-    background-color: #000;
-    border: 1px solid #515151;
-    border-radius: 25px;
-    padding: 10px 30px;
-  }
+.dropdown {
+    margin-top: -4px;
+
+    .dropdown-toggle {
+        @extend %btn-theme;
+
+        &:hover,
+        &:focus,
+        &:visited,
+        &:active,
+        .active {
+            border-color: #fe0d1e;
+        }
+        .show {}
+    }
+}

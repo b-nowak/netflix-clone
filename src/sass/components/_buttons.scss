@@ -1,0 +1,39 @@
+%btn-theme {
+    background-color: #000;
+    border: 1px solid #515151;
+    border-radius: 25px;
+    color: $white;
+    font-size: 15px;
+    padding: 10px 36px;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active,
+    .active {
+        color: $white;
+        border-color: #fe0d1e;
+    }
+
+    &--has-arrow {
+        padding: 10px 51px 10px 39px;
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            background: url('../assets/ico/ico_arrow.png') no-repeat;
+            margin-left: 0;
+            border: 0;
+            height: 10px;
+            width: 17px;
+            right: 15px;
+            top: 17px;
+        }
+    }
+}
+
+.btn-main {
+    @extend %btn-theme;
+}
