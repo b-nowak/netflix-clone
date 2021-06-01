@@ -1,10 +1,10 @@
 .navbar-wrap {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 
     .navbar {
         @include from(xl) {
-            padding: 37px 15px 30px;
+            padding: 37px 0 30px;
         }
 
         .navbar-brand {
@@ -20,29 +20,52 @@
         .navbar-nav {
             .nav-item {
                 .nav-link {
-                    color: $white;
+                    color: $gray;
+                    font-size: 19px;
 
                     @include from(sm) {
                         padding-right: 20px;
                     }
 
                     @include from(xl) {
-                        padding-right: 75px;
+                        padding-right: 66px;
+                    }
+                }
+
+                &.active {
+                    .nav-link {
+                        color: $white;
                     }
                 }
             }
 
         }
+
         .navbar-controls {
             &__item {
-                height: 30px;
-                width: 30px;
+                padding: 10px 21px;
                 background-position: center;
                 background-repeat: no-repeat;
+
                 &--search {
                     background-image: url('../assets/ico/ico_search.png');
                 }
+
+                &--notification {
+                    background-image: url('../assets/ico/ico_notif.png');
+                }
+
+                &--profile {
+                    background-image: url('../assets/avatar.png');
+                }
             }
+        }
+    }
+    .navbar-secondary {
+        &__caption {
+            color: $white;
+            font-size: 32px;
+            font-weight: 400;
         }
     }
 }
