@@ -2,8 +2,6 @@
     margin-top: -4px;
 
     .dropdown-toggle {
-        @extend %btn-theme;
-
         &:hover,
         &:focus,
         &:visited,

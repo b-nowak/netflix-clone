@@ -49,7 +49,7 @@
           <div class="navbar-secondary__pull-left d-flex">
             <h2 class="navbar-secondary__caption">Movies</h2>
             <div class="dropdown">
-              <button class="btn dropdown-toggle dropdown-toggle--has-arrow" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              <button class="btn dropdown-toggle dropdown-toggle btn-main btn-main--has-arrow" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Film genre
               </button>
@@ -61,9 +61,18 @@
             </div>
           </div>
           <div class="navbar-secondary__pull-right d-flex ml-auto">
-            <button class="btn btn-main btn-main--has-arrow text-uppercase" type="button">
-              Recommended for you
-            </button>
+            <button class="btn btn-main btn-main--has-burger" type="button"></button>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle dropdown-toggle btn-main btn-main--has-arrow btn-main--has-box btn-main--double-icon text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Recommended for you
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
           </div>
 
         </div>

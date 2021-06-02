@@ -3,8 +3,8 @@
     border: 1px solid #515151;
     border-radius: 25px;
     color: $white;
-    font-size: 15px;
-    padding: 10px 36px;
+    font-size: 14px;
+    padding: 10px 40px;
     position: relative;
 
     &:hover,
@@ -15,25 +15,60 @@
         color: $white;
         border-color: #fe0d1e;
     }
+}
 
-    &--has-arrow {
-        padding: 10px 51px 10px 39px;
+%btn-icon {
 
-        &::after {
-            display: block;
-            content: "";
-            position: absolute;
-            background: url('../assets/ico/ico_arrow.png') no-repeat;
-            margin-left: 0;
-            border: 0;
-            height: 10px;
-            width: 17px;
-            right: 15px;
-            top: 17px;
-        }
+    &::after,
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        margin-left: 0;
+        border: 0;
+        height: 20px;
+        width: 20px;
     }
 }
 
 .btn-main {
     @extend %btn-theme;
+
+    &--has-arrow {
+        @extend %btn-icon;
+        padding-right: 52px;
+
+        &::after {
+            top: 16px;
+            right: 15px;
+            background: url('../assets/ico/ico_arrow.png') no-repeat;
+        }
+    }
+
+    &--has-box {
+        @extend %btn-icon;
+        padding-left: 52px;
+
+        &::before {
+            top: 12px;
+            left: 15px;
+            background: url('../assets/ico/ico_box.png') no-repeat;
+        }
+    }
+
+    &--has-burger {
+        @extend %btn-icon;
+        margin-right: 18px;
+        padding: 10px 31px;
+
+        &::before {
+            top: 10px;
+            left: 21px;
+            background: url('../assets/ico/ico_burger.png') no-repeat;
+        }
+    }
+
+    &--double-icon {
+        padding: 10px 52px;
+    }
 }
