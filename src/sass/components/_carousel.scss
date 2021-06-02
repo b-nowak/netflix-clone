@@ -1,0 +1,16 @@
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            min-height: 1114px; 
+            background: url('../assets/bg.png') 50% 50% no-repeat;
+            position: relative;
+            &__content {
+                margin-top: 280px;
+            }
+        }
+    }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: none;
+}
