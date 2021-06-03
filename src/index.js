@@ -8,22 +8,44 @@ $(document).ready(() => {
 
     // bootstrap tooltips
     $(() => {
-        $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" })
-    }); 
-
-    $('.carousel-secondary').slick({
-        autoplay: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        centerMode: true,
-        infinite: true,
-        variableWidth: true,
-        //centerPadding: '30px',
-        focusOnSelect: true,
-        //prevArrow: '<a class="slick-prev" href="#"><i data-icon="ei-arrow-left" data-size="m"></i></a>',
-        //nextArrow: '<a class="slick-next" href="#"><i data-icon="ei-arrow-right" data-size="m"></i></a>',
+        $('[data-toggle="tooltip"]').tooltip({
+            trigger: "hover"
+        })
     });
 
+ 
+    $.get( "https://itunes.apple.com/us/rss/topmovies/limit=100/json", function( data1 ) {
+        console.log(data1);
+    });
+
+    $.get("https://itunes.apple.com/us/rss/topmovies/limit=100/json", function (data) {
+        var entries = JSON.parse(data).feed.entry;
+        var carousel = $('.carousel-secondary');
+        
+        $.each(entries, function (index, value) {
+            var image = value["im:image"][2];
+            var artist = value["im:artist"];
+            var name = value["im:name"];
+            console.log(image);
+            console.log(artist);
+            console.log(name);
+            $(carousel).append('<div><img style="margin: 0 35px; height: 355px" alt="' + name.label + '" src="' + image.label + '"/>');
+        });
+
+        $('.carousel-secondary').slick({
+            autoplay: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            infinite: true,
+            variableWidth: true,
+            //centerPadding: '30px',
+            focusOnSelect: true,
+            //prevArrow: '<a class="slick-prev" href="#"><i data-icon="ei-arrow-left" data-size="m"></i></a>',
+            //nextArrow: '<a class="slick-next" href="#"><i data-icon="ei-arrow-right" data-size="m"></i></a>',
+        });
+
+    });
 });
