@@ -40,18 +40,14 @@ $(document).ready(() => {
 
         $.each(entries, function (index, value) {
             var image = value["im:image"][2];
-            var artist = value["im:artist"];
             var name = value["im:name"];
-            //console.log(image);
-            //console.log(artist);
-            //console.log(name);
             $(carousel).append('<div><img style="margin: 0 35px; height: 355px" alt="' + name.label + '" src="' + image.label + '"/>');
         });
     });
 
+    //Temp solution to fight back the issue with Slick not loading left side of the carousel
     setTimeout(function () {
         $('.carousel-secondary').slick(getSliderSettings())
     }, 500);
-
 
 });

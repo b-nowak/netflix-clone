@@ -1,4 +1,5 @@
 .carousel {
+    position: relative;
     .carousel-indicators {
         bottom: 265px;
         li {
@@ -15,6 +16,8 @@
             position: relative;
 
             &__content {
+                position: relative;
+                z-index: 21;
                 margin-top: 280px;
             }
 
@@ -31,6 +34,8 @@
     display: none;
 }
 
-.carousel-secondary {
-    margin-top: -85px;
+.carousel-secondary-wrap {
+    z-index: 2;
+    position: relative;
+    margin-top: -165px;
 }

@@ -4,4 +4,27 @@
     font-weight: 400;
     letter-spacing: 1px;
     margin: 0 21px 0 0;
+    position: relative;
+}
+
+.h2-caption {
+    @extend %h2;
+
+    &--has-rocket {
+        padding: 0 0 43px 43px;
+
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            margin-left: 0;
+            border: 0;
+            height: 30px;
+            width: 30px;
+            top: 4px;
+            left: 0;
+            background: url('../assets/ico/ico_rocket.png') no-repeat;
+            background-size: 91%;
+        }
+    }
 }

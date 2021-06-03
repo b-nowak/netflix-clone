@@ -1,0 +1,18 @@
+.footer {
+    &__menu {
+        list-style-type: none;
+        padding: 120px 0;
+    }
+
+    &__link {
+        padding-bottom: 27px;
+
+        a {
+            color: $dark-gray;
+            transition: .2s;
+            &:hover {
+                color: lighten($dark-gray, 10%);
+            }
+        }
+    }
+}
