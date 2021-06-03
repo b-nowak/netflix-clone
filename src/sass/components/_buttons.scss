@@ -31,6 +31,26 @@
     }
 }
 
+%btn-round {
+    background-color: #fff;
+    border: 0;
+    border-radius: 50px;
+    color: $black;
+    font-size: 17.5px;
+    padding: 16px 52px;
+    position: relative;
+    transition: .2s;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active,
+    .active {
+        color: $black;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
 .btn-main {
     @extend %btn-theme;
 
@@ -70,5 +90,27 @@
 
     &--double-icon {
         padding: 10px 52px;
+    }
+}
+
+.btn-round {
+    @extend %btn-round;
+
+    &--has-play {
+        padding-left: 72px;
+
+        &::after {
+            background: url('../assets/ico/ico_play.png') no-repeat;
+            border: 0;
+            content: "";
+            height: 20px;
+            width: 20px;
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            letter-spacing: -1px;
+        }
     }
 }
