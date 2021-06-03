@@ -70,8 +70,8 @@
         padding-left: 52px;
 
         &::before {
-            top: 12px;
-            left: 15px;
+            top: 11px;
+            left: 19px;
             background: url('../assets/ico/ico_box.png') no-repeat;
         }
     }
@@ -79,22 +79,23 @@
     &--has-burger {
         @extend %btn-icon;
         margin-right: 18px;
-        padding: 10px 31px;
+        padding: 22px 31px;
 
         &::before {
-            top: 10px;
-            left: 21px;
+            top: 13px;
+            left: 20px;
             background: url('../assets/ico/ico_burger.png') no-repeat;
         }
     }
 
     &--double-icon {
-        padding: 10px 52px;
+        padding: 10px 54px;
     }
 }
 
 .btn-round {
     @extend %btn-round;
+    font-weight: $bold;
 
     &--has-play {
         padding-left: 72px;
@@ -111,6 +112,41 @@
             top: 18px;
             left: 40px;
             letter-spacing: -1px;
+        }
+    }
+
+    &--has-plus {
+        padding-left: 72px;
+
+        &::after {
+            background: url('../assets/ico/ico_plus.png') no-repeat;
+            border: 0;
+            content: "";
+            height: 20px;
+            width: 20px;
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            letter-spacing: -1px;
+        }
+    }
+
+    &--is-transparent {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: $white;
+
+        &.focus {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: $white;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: $white;
         }
     }
 }

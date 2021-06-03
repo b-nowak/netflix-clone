@@ -75,6 +75,9 @@
     }
 
     .navbar-secondary {
+        &__pull-right {
+            margin-top: -5px;
+        }
         &__caption {
             @extend %h2;
         }
