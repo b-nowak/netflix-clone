@@ -1,6 +1,11 @@
 .carousel {
     .carousel-indicators {
         bottom: 265px;
+        li {
+            width: 65px;
+            margin-right: 12.5px;
+            margin-left: 12.5px;
+        }
     }
 
     .carousel-inner {
@@ -28,5 +33,4 @@
 
 .carousel-secondary {
     margin-top: -85px;
-
 }
