@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-sm">
           <a class="navbar-brand" href="#"><img src="assets/logo.png" alt=""></a>
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">XXX</button>
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
@@ -35,7 +35,7 @@
               </li>
             </ul>
           </div>
-          <div class="navbar-controls">
+          <div class="navbar-controls d-none d-lg-block">
             <a href="#" class="navbar-controls__item navbar-controls__item--search"></a>
             <a href="#" class="navbar-controls__item navbar-controls__item--notification"></a>
             <a href="#" class="navbar-controls__item navbar-controls__item--profile"></a>
@@ -45,7 +45,7 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </nav>
-        <div class="navbar-secondary d-flex align-items-center">
+        <div class="navbar-secondary d-none d-lg-flex  align-items-center">
           <div class="navbar-secondary__pull-left d-flex">
             <h2 class="navbar-secondary__caption">Movies</h2>
             <div class="dropdown">
@@ -100,8 +100,9 @@
                   <button type="button" class="btn btn-round btn-round--has-play text-uppercase mr-3">
                     watch
                   </button>
-                  <button type="button" class="btn btn-round btn-round--has-plus btn-round--is-transparent text-uppercase" data-toggle="button" aria-pressed="false"
-                    autocomplete="off">
+                  <button type="button"
+                    class="btn btn-round btn-round--has-plus btn-round--is-transparent text-uppercase"
+                    data-toggle="button" aria-pressed="false" autocomplete="off">
                     add list
                   </button>
                 </div>
@@ -111,8 +112,46 @@
           </div>
         </div>
         <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="carousel-item__content">
+                  <img src="assets/movie-logos/logo_2.png" alt="">
+                  <p class="carousel-item__desc">He is an evil villain who wants to steal the moon. Fortunately for us,
+                    three girls are not going to let this happen!</p>
+                  <button type="button" class="btn btn-round btn-round--has-play text-uppercase mr-3">
+                    watch
+                  </button>
+                  <button type="button"
+                    class="btn btn-round btn-round--has-plus btn-round--is-transparent text-uppercase"
+                    data-toggle="button" aria-pressed="false" autocomplete="off">
+                    add list
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="carousel-item__content">
+                  <img src="assets/movie-logos/logo_1.png" style="transform: rotate(180deg);" alt="">
+                  <p class="carousel-item__desc">He is an evil villain who wants to steal the moon. Fortunately for us,
+                    three girls are not going to let this happen!</p>
+                  <button type="button" class="btn btn-round btn-round--has-play text-uppercase mr-3">
+                    watch
+                  </button>
+                  <button type="button"
+                    class="btn btn-round btn-round--has-plus btn-round--is-transparent text-uppercase"
+                    data-toggle="button" aria-pressed="false" autocomplete="off">
+                    add list
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -212,7 +251,7 @@
             </div>
           </div>
           <div class="col-xl-2 d-none d-xl-flex"></div>
-          <div class="col justify-content-center">
+          <div class="col-xl-12 justify-content-center">
             <ul class="list-inline footer__socials d-flex justify-content-center align-items-center">
               <li class="list-inline-item">
                 <a class="footer__social-icon text-center" target="_blank" href="#">

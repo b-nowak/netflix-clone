@@ -1,0 +1,73 @@
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 40px;
+    height: 60px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+}
+
+.slick-prev {
+    background: url('../assets/ico/ico_c_arrow_left.png') 50% 50% no-repeat;
+    position: absolute;
+    z-index: 999999;
+    bottom: 120px;
+    left: 22px;
+}
+
+.slick-next {
+    background: url('../assets/ico/ico_c_arrow_right.png') 50% 50% no-repeat;
+    position: absolute;
+    z-index: 999999;
+    bottom: 120px;
+    right: 22px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus {
+    color: transparent;
+    outline: none;
+    background: url('../assets/ico/ico_c_arrow_left.png') 50% 50% no-repeat;
+}
+
+.slick-next:hover,
+.slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: url('../assets/ico/ico_c_arrow_right.png') 50% 50% no-repeat;
+}
+
+
+.slick-list:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, transparent 80%, black 102%);
+    width: 50%;
+}
+
+.slick-list:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to left, transparent 80%, black 102%);
+    width: 50%;
+    z-index: 1;
+}

@@ -30,9 +30,9 @@ $(document).ready(() => {
         }
     }
 
-    $.get("https://itunes.apple.com/us/rss/topmovies/limit=100/json", function (data1) {
+    /*$.get("https://itunes.apple.com/us/rss/topmovies/limit=100/json", function (data1) {
         console.log(data1);
-    });
+    });*/
 
     $.get("https://itunes.apple.com/us/rss/topmovies/limit=100/json", function (data) {
         var entries = JSON.parse(data).feed.entry;
@@ -49,5 +49,6 @@ $(document).ready(() => {
     setTimeout(function () {
         $('.carousel-secondary').slick(getSliderSettings())
     }, 500);
+
 
 });
