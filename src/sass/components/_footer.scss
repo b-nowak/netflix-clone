@@ -1,0 +1,43 @@
+.footer {
+    &__pre {
+        margin: 120px 0 31px 0;
+    }
+
+    &__menu {
+        list-style-type: none;
+    }
+
+    &__link {
+        padding-bottom: 19px;
+
+        a {
+            color: $dark-gray;
+            font-size: 15px;
+            transition: .2s;
+
+            &:hover {
+                color: lighten($dark-gray, 10%);
+            }
+        }
+    }
+
+    &__socials {
+        padding: 0 0 80px;
+
+        .list-inline-item:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__social-icon {
+        padding: 5px;
+        opacity: 1;
+        transition: .2s;
+
+        &:hover {
+            opacity: .70;
+        }
+
+        a {}
+    }
+}

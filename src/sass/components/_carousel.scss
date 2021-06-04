@@ -1,0 +1,42 @@
+.carousel {
+    position: relative;
+    .carousel-indicators {
+        bottom: 265px;
+        li {
+            width: 65px;
+            margin-right: 12.5px;
+            margin-left: 12.5px;
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item {
+            min-height: 1114px;
+            background: url('../assets/bg.png') 50% 50% no-repeat;
+            position: relative;
+
+            &__content {
+                position: relative;
+                z-index: 21;
+                margin-top: 280px;
+            }
+
+            &__desc {
+                font-size: 24px;
+                margin: 21px 0 49px;
+                line-height: 1.6em;
+            }
+        }
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+.carousel-secondary-wrap {
+    z-index: 2;
+    position: relative;
+    margin-top: -165px;
+}

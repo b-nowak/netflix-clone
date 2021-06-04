@@ -1,0 +1,98 @@
+.navbar-wrap {
+    position: absolute;
+    z-index: 2;
+
+    .navbar {
+        @include from(xl) {
+            padding: 36.5px 0 36.5px;
+        }
+
+        .navbar-brand {
+            @include from(sm) {
+                margin-right: 50px;
+            }
+
+            @include from(xl) {
+                margin-right: 92px;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $gray;
+                    transition: .2s;
+
+                    &:hover {
+                        color: lighten($gray, 10%);
+                    }
+
+                    font-size: 19px;
+
+                    @include from(sm) {
+                        padding-right: 20px;
+                    }
+
+                    @include from(xl) {
+                        padding-right: 66px;
+                    }
+                }
+
+                &.active {
+                    .nav-link {
+                        color: $white;
+                    }
+                }
+            }
+
+        }
+
+        .navbar-controls {
+            &__item {
+                background-position: center;
+                background-repeat: no-repeat;
+                padding: 10px 21px;
+                opacity: 1;
+                transition: .2s;
+
+                &:hover {
+                    opacity: .95;
+                }
+
+                &--search {
+                    background-image: url('../assets/ico/ico_search.png');
+                }
+
+                &--notification {
+                    background-image: url('../assets/ico/ico_notif.png');
+                }
+
+                &--profile {
+                    background-image: url('../assets/avatar.png');
+                    position: relative;
+                    margin-right: 17px;
+
+                    &::after {
+                        background: url('../assets/ico/ico_arrow.png') no-repeat;
+                        border: 0;
+                        content: "";
+                        height: 20px;
+                        width: 20px;
+                        display: block;
+                        margin-left: 0;
+                        position: absolute;
+                        letter-spacing: -1px;
+                        top: 16px;
+                        left: 42px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-secondary {
+        &__caption {
+            @extend %h2;
+        }
+    }
+}

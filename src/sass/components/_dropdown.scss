@@ -1,0 +1,12 @@
+.dropdown {
+    .dropdown-toggle {
+        &:hover,
+        &:focus,
+        &:visited,
+        &:active,
+        .active {
+            border-color: #fe0d1e;
+        }
+        .show {}
+    }
+}

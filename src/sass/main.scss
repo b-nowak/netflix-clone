@@ -1,6 +1,19 @@
-@import "~bootstrap/scss/bootstrap";
+//@import "~bootstrap/scss/bootstrap";
 
+// import Slick css
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+@import "bootstrap-theme";
 @import "fonts";
-@import "variables";
-@import "components";
 @import "reset";
+@import "variables";
+@import "mixins";
+@import "components/buttons";
+@import "components/carousel";
+@import "components/dropdown";
+@import "components/footer";
+@import "components/headers";
+@import "components/navbar";
+@import "components/slick";
+

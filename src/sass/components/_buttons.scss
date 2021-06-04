@@ -1,0 +1,152 @@
+%btn-theme {
+    background-color: #000;
+    border: 1px solid #515151;
+    border-radius: 25px;
+    color: $white;
+    font-size: 14px;
+    padding: 10px 40px;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active,
+    .active {
+        color: $white;
+        border-color: #fe0d1e;
+    }
+}
+
+%btn-icon {
+
+    &::after,
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        margin-left: 0;
+        border: 0;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+%btn-round {
+    background-color: #fff;
+    border: 0;
+    border-radius: 50px;
+    color: $black;
+    font-size: 17.5px;
+    padding: 16px 52px;
+    position: relative;
+    transition: .2s;
+
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active,
+    .active {
+        color: $black;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.btn-main {
+    @extend %btn-theme;
+
+    &--has-arrow {
+        @extend %btn-icon;
+        padding-right: 52px;
+
+        &::after {
+            top: 16px;
+            right: 15px;
+            background: url('../assets/ico/ico_arrow.png') no-repeat;
+        }
+    }
+
+    &--has-box {
+        @extend %btn-icon;
+        padding-left: 52px;
+
+        &::before {
+            top: 11px;
+            left: 19px;
+            background: url('../assets/ico/ico_box.png') no-repeat;
+        }
+    }
+
+    &--has-burger {
+        @extend %btn-icon;
+        margin-right: 18px;
+        padding: 22px 31px;
+
+        &::before {
+            top: 13px;
+            left: 20px;
+            background: url('../assets/ico/ico_burger.png') no-repeat;
+        }
+    }
+
+    &--double-icon {
+        padding: 11px 54px;
+    }
+}
+
+.btn-round {
+    @extend %btn-round;
+    font-weight: $bold;
+
+    &--has-play {
+        padding-left: 72px;
+
+        &::after {
+            background: url('../assets/ico/ico_play.png') no-repeat;
+            border: 0;
+            content: "";
+            height: 20px;
+            width: 20px;
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            letter-spacing: -1px;
+        }
+    }
+
+    &--has-plus {
+        padding-left: 72px;
+
+        &::after {
+            background: url('../assets/ico/ico_plus.png') no-repeat;
+            border: 0;
+            content: "";
+            height: 20px;
+            width: 20px;
+            display: block;
+            margin-left: 0;
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            letter-spacing: -1px;
+        }
+    }
+
+    &--is-transparent {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: $white;
+
+        &.focus {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: $white;
+        }
+
+        &:hover,
+        &:active,
+        &.active {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: $white;
+        }
+    }
+}
